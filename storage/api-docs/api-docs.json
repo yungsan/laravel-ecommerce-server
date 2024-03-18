@@ -1,0 +1,121 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "L5 OpenApi",
+        "description": "L5 Swagger OpenApi description",
+        "contact": {
+            "email": "darius@matulionis.lt"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/products": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "description": "Get all Products",
+                "operationId": "24c51a4469fbe1d6ef9c4d258e31bbf3",
+                "responses": {
+                    "200": {
+                        "description": "Oke"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Products"
+                ],
+                "description": "Update a Products",
+                "operationId": "a307be730f2f32d10050d9fd1201a49a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Product ID",
+                        "required": true
+                    },
+                    {
+                        "name": "p_name",
+                        "in": "query",
+                        "description": "Product name"
+                    },
+                    {
+                        "name": "p_price",
+                        "in": "query",
+                        "description": "Product price"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "product page"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Products"
+                ],
+                "description": "Add new Products",
+                "operationId": "7e28dda3b3c86a24822b81cb1a157d36",
+                "parameters": [
+                    {
+                        "name": "p_name",
+                        "in": "query",
+                        "description": "Product name",
+                        "required": true
+                    },
+                    {
+                        "name": "p_price",
+                        "in": "query",
+                        "description": "Product price",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "product page"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Products"
+                ],
+                "description": "Update a Products",
+                "operationId": "e06d88a8f4a28c01792d05230880b447",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Product ID",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "product page"
+                    }
+                }
+            }
+        },
+        "/api/users": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "description": "Get all Users",
+                "operationId": "1ad1cf4ffbfc84b02284335bdd828008",
+                "responses": {
+                    "200": {
+                        "description": "Oke"
+                    }
+                }
+            }
+        }
+    }
+}
